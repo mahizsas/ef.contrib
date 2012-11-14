@@ -1,5 +1,10 @@
 ﻿namespace UnitTests.ModelConfiguration.Configuration
 {
+    using EF.Contrib.EntityTypeConfiguration.ModelConfiguartion.Configuration;
+    using Moq;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration.Configuration;
     using Xunit;
 
     /// <summary>
@@ -8,13 +13,21 @@
     public class ConfigurationRegistrarExtensionsTests
     {
         [Fact]
-        public void AddFrom_configure_all_structural_type_configurations_using_the_resolved()
+        public void Add_configure_all_structural_type_configurations_using_the_resolved()
         {
+            var configurationResolverMock = new Mock<IConfigurationResolver>();
+            configurationResolverMock.Setup(cr => cr.SolveStructuralTypeConfigurations())
+                                     .Returns(new List<dynamic>());
+
+             
         }
 
         [Fact]
-        public void AddFrom_throw_exception_if_resolver_is_null()
+        public void Add_throw_exception_if_resolver_is_null()
         {
         }
+
+        
     }
+    
 }

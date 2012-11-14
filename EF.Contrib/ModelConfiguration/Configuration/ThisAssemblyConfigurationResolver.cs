@@ -4,13 +4,16 @@
     using System.Collections.Generic;
     using System.Reflection;
 
-    public class ThisAssemblyResolver
-        :AssemblyResolverBase
+    /// <summary>
+    /// Configuration resolver based on this assembly
+    /// </summary>
+    public class ThisAssemblyConfigurationResolver
+        :ConfigurationResolverBase
     {
         /// <summary>
-        /// <see cref="EF.Contrib.ModelConfiguration.Configuration.AssemblyResolverBase"/>
+        /// <see cref="EF.Contrib.ModelConfiguration.Configuration.ConfigurationResolverBase"/>
         /// </summary>
-        /// <returns><see cref="EF.Contrib.ModelConfiguration.Configuration.AssemblyResolverBase"/></returns>
+        /// <returns><see cref="EF.Contrib.ModelConfiguration.Configuration.ConfigurationResolverBase"/></returns>
         public override IEnumerable<dynamic> SolveStructuralTypeConfigurations()
         {
             var configurations = new List<dynamic>();

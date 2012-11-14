@@ -2,19 +2,19 @@
 {
     using EF.Contrib.EntityTypeConfiguration.ModelConfiguartion.Configuration;
 
-    public static class AssemblyResolver
+    public static class ConfigurationSolver
     {
         /// <summary>
         /// Get  assembly resolver for this assembly
         /// </summary>
         /// <returns>the assembly resolver</returns>
-        public static IAssemblyResolver This() { return new ThisAssemblyResolver(); }
+        public static IConfigurationResolver FromThisAssembly() { return new ThisAssemblyConfigurationResolver(); }
 
         /// <summary>
         /// Get a new assembly resolver for assembly with name <paramref name="assemblyName"/>
         /// </summary>
         /// <param name="assemblyName">The assembly name</param>
         /// <returns>the assembly resolver</returns>
-        public static IAssemblyResolver Named(string assemblyName) { return new NamedAssemblyResolver(assemblyName); }
+        public static IConfigurationResolver FromNamedAssembly(string assemblyName) { return new NamedAssemblyConfigurationResolver(assemblyName); }
     }
 }

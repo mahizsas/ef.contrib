@@ -79,16 +79,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ModelConfiguration\Configuration\AssemblyResolver.cs" />
-    <Compile Include="ModelConfiguration\Configuration\AssemblyResolverBase.cs" />
+    <Compile Include="ModelConfiguration\Configuration\ConfigurationSolver.cs" />
+    <Compile Include="ModelConfiguration\Configuration\ConfigurationResolverBase.cs" />
     <Compile Include="ModelConfiguration\Configuration\ConfigurationRegistrarExtensions.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationActivator.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationFilter.cs" />
-    <Compile Include="ModelConfiguration\Configuration\IAssemblyResolver.cs" />
+    <Compile Include="ModelConfiguration\Configuration\IConfigurationResolver.cs" />
     <Compile Include="ModelConfiguration\Configuration\IStructuralTypeConfigurationActivator.cs" />
     <Compile Include="ModelConfiguration\Configuration\IStructuralTypeConfigurationFilter.cs" />
-    <Compile Include="ModelConfiguration\Configuration\NamedAssemblyResolver.cs" />
-    <Compile Include="ModelConfiguration\Configuration\ThisAssemblyResolver.cs" />
+    <Compile Include="ModelConfiguration\Configuration\NamedAssemblyConfigurationResolver.cs" />
+    <Compile Include="ModelConfiguration\Configuration\ThisAssemblyConfigurationResolver.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\System\Strings.cs" />
   </ItemGroup>

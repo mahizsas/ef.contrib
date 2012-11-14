@@ -1,5 +1,4 @@
-﻿
-namespace EF.Contrib.ModelConfiguration.Configuration
+﻿namespace EF.Contrib.ModelConfiguration.Configuration
 {
     using EF.Contrib.EntityTypeConfiguration.ModelConfiguartion.Configuration;
     using System.Data.Entity.ModelConfiguration.Configuration;
@@ -14,13 +13,13 @@ namespace EF.Contrib.ModelConfiguration.Configuration
         /// Add new structural type configuration instance using the specific assembly resolver
         /// </summary>
         /// <param name="configurationRegistrar">ConfigurationRegistrar instance</param>
-        /// <param name="assemblyResolver">The assembly resolver to use</param>
-        public static void AddFrom(this ConfigurationRegistrar configurationRegistrar, IAssemblyResolver assemblyResolver)
+        /// <param name="configurationResolver">The configuration resolver to use</param>
+        public static void Add(this ConfigurationRegistrar configurationRegistrar, IConfigurationResolver configurationResolver)
         {
-            Contract.Requires(assemblyResolver != null);
+            Contract.Requires(configurationResolver != null);
 
             //solve configurations using the specific resolver....
-            var configurations = assemblyResolver.SolveStructuralTypeConfigurations();
+            var configurations = configurationResolver.SolveStructuralTypeConfigurations();
 
             //add all configurations
             foreach (var item in configurations)

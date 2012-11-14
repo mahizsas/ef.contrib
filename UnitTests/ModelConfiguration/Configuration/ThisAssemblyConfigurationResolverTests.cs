@@ -8,12 +8,12 @@
     /// <summary>
     /// A collection of tests for this assembly resolver
     /// </summary>
-    public class ThisAssemblyResolverTests
+    public class ThisAssemblyConfigurationResolverTests
     {
         [Fact]
         public void SolveStructuralTypeConfigurations_return_the_instances_of_structuraltype_configurations()
         {
-            var resolver = new ThisAssemblyResolver();
+            var resolver = new ThisAssemblyConfigurationResolver();
 
             var instances = resolver.SolveStructuralTypeConfigurations();
 

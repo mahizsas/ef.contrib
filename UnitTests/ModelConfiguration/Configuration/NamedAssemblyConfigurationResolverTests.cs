@@ -8,18 +8,27 @@
     /// <summary>
     /// A collection of tests for named assembly resolver
     /// </summary>
-    public class NamedAssemblyResolverTests
+    public class NamedAssemblyConfigurationResolverTests
     {
         [Fact]
         public void SolveStructuralTypeConfigurations_return_the_instances_of_structuraltype_configurations()
         {
-            var resolver = new NamedAssemblyResolver("UnitTests");
+            var resolver = new NamedAssemblyConfigurationResolver("UnitTests");
 
             var instances = resolver.SolveStructuralTypeConfigurations();
 
             Assert.NotNull(instances);
             Assert.True(instances.Any((i) => i.GetType() == typeof(NamedAssemblyPublicEntityMap)));
             Assert.True(instances.Any((i) => i.GetType() == typeof(NamedAssemblyPublicComplexMap)));
+        }
+
+        [Fact]
+        public void AssemblyName_got_the_assemblyname()
+        {
+            var name = "UnitTests";
+            var resolver = new NamedAssemblyConfigurationResolver(name);
+
+            Assert.Equal(name,resolver.AssemblyName);
         }
 
 

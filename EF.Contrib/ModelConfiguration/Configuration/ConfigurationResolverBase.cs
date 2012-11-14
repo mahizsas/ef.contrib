@@ -4,10 +4,10 @@
     using System.Collections.Generic;
 
     /// <summary>
-    /// The base class for assembly resolvers with the local-default filter
+    /// The base class for configuration resolvers with the local-default filter
     /// </summary>
-    public abstract class AssemblyResolverBase
-        :IAssemblyResolver
+    public abstract class ConfigurationResolverBase
+        :IConfigurationResolver
     {
         IStructuralTypeConfigurationFilter _filter;
 

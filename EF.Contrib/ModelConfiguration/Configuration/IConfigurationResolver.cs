@@ -1,14 +1,15 @@
-﻿using System.Collections.Generic;
+﻿
 namespace EF.Contrib.EntityTypeConfiguration.ModelConfiguartion.Configuration
 {
+    using System.Collections.Generic;
 
     /// <summary>
-    /// The assembly resolver for configuration types
+    /// The configuration resolver base contract
     /// </summary>
-    public interface IAssemblyResolver
+    public interface IConfigurationResolver
     {
         /// <summary>
-        /// Solve the struyctural type configurations
+        /// Solve the structural types configurations
         /// </summary>
         /// <returns>A collection of structural type configurations instances</returns>
         IEnumerable<dynamic> SolveStructuralTypeConfigurations();
