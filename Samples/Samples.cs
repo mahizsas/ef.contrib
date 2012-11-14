@@ -1,14 +1,11 @@
-﻿using EF.Contrib.ModelConfiguration.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Samples
+﻿namespace Samples
 {
+    using EF.Contrib.ModelConfiguration.Configuration;
+    using System.Collections.Generic;
+    using System.Data.Entity;
+    using System.Data.Entity.ModelConfiguration;
+    using System.Linq;
+
     static class Samples
     {
         public static void TestLoadConfigurations()
