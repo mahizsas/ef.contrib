@@ -18,6 +18,7 @@ namespace EF.Contrib.ModelConfiguration.Configuration
         public static void AddFrom(this ConfigurationRegistrar configurationRegistrar, IAssemblyResolver assemblyResolver)
         {
             Contract.Requires(assemblyResolver != null);
+
             //solve configurations using the specific resolver....
             var configurations = assemblyResolver.SolveStructuralTypeConfigurations();
 

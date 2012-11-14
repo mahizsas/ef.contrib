@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelConfiguration\Configuration\ConfigurationRegistrarExtensionsTests.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationActivatorTests.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationFilterTests.cs" />
     <Compile Include="ModelConfiguration\Configuration\NamedAssemblyResolverTests.cs" />
