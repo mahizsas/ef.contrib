@@ -4,7 +4,9 @@
     using System;
     using Xunit;
 
-
+    /// <summary>
+    /// A collection of tests for DefaultStructuralTypeConfigurationActivator
+    /// </summary>
     public class DefaultStructuralTypeConfigurationActivatorTests
     {
         [Fact]

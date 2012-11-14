@@ -1,15 +1,13 @@
-﻿
-namespace UnitTests.ModelConfiguration.Configuration
+﻿namespace UnitTests.ModelConfiguration.Configuration
 {
     using EF.Contrib.ModelConfiguration.Configuration;
-    using System;
-    using System.Collections.Generic;
     using System.Data.Entity.ModelConfiguration;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Xunit;
 
+    /// <summary>
+    /// A collection of tests for named assembly resolver
+    /// </summary>
     public class NamedAssemblyResolverTests
     {
         [Fact]

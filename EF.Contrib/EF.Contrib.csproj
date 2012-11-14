@@ -79,7 +79,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ModelConfiguration\Configuration\AssemblyResolver.cs" />
     <Compile Include="ModelConfiguration\Configuration\AssemblyResolverBase.cs" />
+    <Compile Include="ModelConfiguration\Configuration\ConfigurationRegistrarExtensions.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationActivator.cs" />
     <Compile Include="ModelConfiguration\Configuration\DefaultStructuralTypeConfigurationFilter.cs" />
     <Compile Include="ModelConfiguration\Configuration\IAssemblyResolver.cs" />
